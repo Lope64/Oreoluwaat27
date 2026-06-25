@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday, My Love</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            background: url("IMG_7321.JPG") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.55);
+            min-height: 100vh;
+            padding: 30px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .birthday-banner {
+            margin-top: 20px;
+            padding: 25px 30px;
+            background: rgba(0, 0, 0, 0.55);
+            border-radius: 20px;
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+        }
+
+        .birthday-banner h1 {
+            font-size: 38px;
+            color: #ffd6f6;
+            text-shadow: 0 0 10px #ff8ad6, 0 0 20px #ff5fc8;
+            margin: 0;
+        }
+
+        .sparkles::before,
+        .sparkles::after {
+            content: "✨";
+            position: absolute;
+            font-size: 30px;
+            animation: sparkle 2s infinite ease-in-out;
+            opacity: 0;
+        }
+
+        .sparkles::before { top: -10px; left: -20px; }
+        .sparkles::after { bottom: -10px; right: -20px; }
+
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.3); }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .intro {
+            margin-top: 25px;
+            font-size: 18px;
+            width: 90%;
+            max-width: 600px;
+            line-height: 1.6;
+            background: rgba(0,0,0,0.45);
+            padding: 20px;
+            border-radius: 15px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .tap-button {
+            margin-top: 20px;
+            background: #ff8ad6;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            animation: bounce 1.5s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .links {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .links a {
+            color: #ffd6f6;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .gallery {
+            margin-top: 40px;
+            width: 90%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            opacity: 0;
+            animation: galleryFade 2s ease forwards;
+        }
+
+        @keyframes galleryFade {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+
+<body>
+<div class="overlay">
+
+    <div class="birthday-banner">
+        <h1>🎉 Happy Birthday, My Love 🎉</h1>
+        <div class="sparkles"></div>
+    </div>
+
+    <div class="intro">
+        I made this little corner of the internet just for you.  
+        It’s cute, a bit silly, and definitely romantic —  
+        kind of like how I feel whenever I think about you.  
+        Tap around, explore, smile… and maybe blush a little.
+    </div>
+
+    <!-- FIXED TAP-ME BUTTON -->
+    <a class="tap-button" onclick="showSpecialMessage()">Tap Me 💗</a>
+
+    <div class="links">
+        <a href="loveletter.html">Love Letter 💌</a>
+        <a href="memories.html">Memories 📸</a>
+        <a href="protected.html">Protected Page 🔒</a>
+        <a href="secret.html">Secret Page 💍</a>
+    </div>
+
+    <div class="gallery">
+        <img src="unnamed.jpg">
+        <img src="2.JPG">
+        <img src="10.jpeg">
+        <img src="3.JPG">
+        <img src="4.JPG">
+        <img src="18.JPG">
+        <img src="5.JPG">
+        <img src="7.jpeg">
+    </div>
+
+</div>
+
+<!-- Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+function showSpecialMessage() {
+    confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 }
+    });
+
+    alert("🎉 Happy Birthday, my love! 🎉\n\nYou deserve joy, softness, surprises, and everything beautiful.\nAnd I hope this little moment made you smile. 💗");
+}
+
+window.onload = () => {
+    document.querySelector(".sparkles").style.opacity = "1";
+};
+</script>
+
+</body>
+</html>
