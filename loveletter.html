@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Love Letter</title>
+
     <style>
         body {
             margin: 0;
@@ -19,6 +20,7 @@
             padding: 30px 10px;
         }
 
+        /* Slideshow */
         .slideshow-container {
             max-width: 600px;
             margin: 20px auto;
@@ -31,17 +33,29 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.7);
         }
 
+        /* Love Letter Box */
         .love-message {
             width: 90%;
-            max-width: 600px;
+            max-width: 650px;
             margin: 40px auto;
             background: rgba(0, 0, 0, 0.45);
             padding: 25px;
             border-radius: 15px;
             text-align: left;
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 18px;
+            box-shadow: 0 0 15px rgba(255, 200, 230, 0.4);
         }
 
+        .love-message blockquote {
+            font-style: italic;
+            margin: 20px 0;
+            padding-left: 15px;
+            border-left: 3px solid #ffb6d9;
+            color: #ffe6f2;
+        }
+
+        /* Playlist */
         .music-player {
             width: 90%;
             max-width: 600px;
@@ -51,14 +65,20 @@
             gap: 20px;
         }
 
-        a { color: #ffd6f6; font-weight: bold; }
+        a {
+            color: #ffd6f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
 <div class="overlay">
 
     <p><a href="index.html">⬅ Back to Home</a></p>
 
+    <!-- Slideshow -->
     <div class="slideshow-container">
         <div class="mySlides"><img src="8.jpeg"></div>
         <div class="mySlides"><img src="12.JPG"></div>
@@ -67,23 +87,39 @@
         <div class="mySlides"><img src="9.JPG"></div>
     </div>
 
-    <h2>Our Songs 🎵</h2>
+    <!-- FULL LOVE LETTER (your text) -->
+    <div class="love-message">
+        <p>My love, I love you always.</p>
 
-    <div class="music-player">
-        <!-- All 7 Spotify embeds -->
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1bhUWB0zJMIKr9yVPrkEuI?utm_source=generator" width="100%" height="352"></iframe>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2Bv0cdN1Bnf1wnXytWyqJd?utm_source=generator" width="100%" height="352"></iframe>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0OjOPEq8X1I0i3tn79lnY3?utm_source=generator" width="100%" height="352"></iframe>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0PqiJTvvmEiV3rTZcQ7SIS?utm_source=generator" width="100%" height="352"></iframe>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7KTHlwl3xN7ngysoOJoIu7?utm_source=generator" width="100%" height="352"></iframe>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5sv0WnUs74Orn6GoPmC5im?utm_source=generator" width="100%" height="352"></iframe>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1i4F583d9v9RabcfOlKKVL?utm_source=generator" width="100%" height="352"></iframe>
+        <p>I know life has been hard, and we have both been busy grinding, but I want you to know that you are always in my heart, on my mind, and in my very soul. Words alone cannot begin to describe how much you mean to me.</p>
+
+        <p>Sometimes I consider myself the luckiest man on the planet. I am captivated by your love and beauty, and I cannot imagine living this life without you by my side.</p>
+
+        <p>While thinking of you, I came across this poem:</p>
+
+        <blockquote>
+            “All words<br>
+            In the dictionaries, letters, and novels<br>
+            Died.<br>
+            I want to discover<br>
+            A way to love you<br>
+            Without words.”
+        </blockquote>
+
+        <p>Yours with all my heart – Tolulope.</p>
     </div>
 
-    <div class="love-message">
-        <p>My love, I love you always...</p>
-        <blockquote>“All words in the dictionaries died…”</blockquote>
-        <p>Yours with all my heart – Tolulope.</p>
+    <!-- Playlist -->
+    <h2 style="margin-top:30px;">Our Songs 🎵</h2>
+
+    <div class="music-player">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1bhUWB0zJMIKr9yVPrkEuI" width="100%" height="352"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2Bv0cdN1Bnf1wnXytWyqJd" width="100%" height="352"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0OjOPEq8X1I0i3tn79lnY3" width="100%" height="352"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0PqiJTvvmEiV3rTZcQ7SIS" width="100%" height="352"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7KTHlwl3xN7ngysoOJoIu7" width="100%" height="352"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5sv0WnUs74Orn6GoPmC5im" width="100%" height="352"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1i4F583d9v9RabcfOlKKVL" width="100%" height="352"></iframe>
     </div>
 
 </div>
