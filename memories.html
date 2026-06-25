@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Memories</title>
+
     <style>
         body {
             margin: 0;
@@ -19,26 +20,36 @@
             padding: 30px 10px;
         }
 
+        /* Carousel */
         .carousel img {
             width: 100%;
             max-width: 600px;
             border-radius: 20px;
             margin-top: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+        }
+
+        /* Heart Collage */
+        .heart-collage {
+            margin-top: 40px;
         }
 
         .heart-collage img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
+            object-fit: cover;
             margin: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.7);
         }
 
+        /* Polaroids */
         .polaroids {
             margin-top: 40px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            flex-wrap: wrap;
         }
 
         .polaroid {
@@ -47,6 +58,7 @@
             width: 150px;
             padding: 10px;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.7);
         }
 
         .polaroid img {
@@ -54,9 +66,20 @@
             border-radius: 5px;
         }
 
-        a { color: #ffd6f6; font-weight: bold; }
+        .polaroid p {
+            margin-top: 8px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        a {
+            color: #ffd6f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
 <div class="overlay">
 
@@ -64,10 +87,12 @@
 
     <h2>Our Memories 📸</h2>
 
+    <!-- Carousel -->
     <div class="carousel">
         <img src="18.JPG">
     </div>
 
+    <!-- Heart Collage -->
     <div class="heart-collage">
         <img src="16.jpeg">
         <img src="14.jpeg">
@@ -76,6 +101,7 @@
         <img src="24.jpeg">
     </div>
 
+    <!-- Polaroids -->
     <div class="polaroids">
         <div class="polaroid"><img src="16.jpeg"><p>First date 💕</p></div>
         <div class="polaroid"><img src="14.jpeg"><p>Inside joke 😂</p></div>
